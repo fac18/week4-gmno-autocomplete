@@ -1,13 +1,15 @@
 const handlers = require('./handlers.js')
 const router = (request, response) => {
-    const url = request.url;
-    if (url === '/') {
-        handlers.handleHome(request, response);
-    } else if (url.indexOf('public')) {
-        handlers.handlePublic(request, response, url); // PASS THE URL 
+    const endpoint = request.url;
     
-    } else if (url.includes("/search")) {
-        handlers.handleData(request, response, url);
+    if (endpoint === '/') {
+        handlers.handleHome(request, response);
+    } else if (endpoint.includes('public')) {
+        handlers.handlePublic(request, response, endpoint); // PASS THE URL 
+    
+    } else if (endpoint.includes("search")) {
+        console.log("this is router search");
+        handlers.handleData(request, response, endpoint);
            
     } else {
         response.writeHead(404);

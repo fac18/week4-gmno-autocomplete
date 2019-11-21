@@ -1,6 +1,8 @@
-const data = require('../data/data');
+const data = require('./data');
 const fs = require('fs');
 const path = require('path');
+const url = require ('url');
+
 //handler takes care of serving the page 
 // handleHome (if statement) passed from router // its the home page 
 
@@ -34,15 +36,15 @@ const handleHome = (request, response) => {
     });
 }
 // handlePublic (else if statements) passed from router 
-const handlePublic = (request, response, url) => { // PASS THE URL
-    const extension = url.split('.')[1];
+const handlePublic = (request, response, endpoint) => { // PASS THE URL
+    const extension = endpoint.split('.')[1];
     const extensionType = {
         html: 'text/html',
         css: 'text/css',
         js: 'application/js',
         ico: 'image/x-icon'
     };
-    const filePath = path.join(__dirname, '..', url);
+    const filePath = path.join(__dirname, '..', endpoint);
     fs.readFile(filePath, (error, file) => {
         if (error) {
             console.log(error);
@@ -60,14 +62,24 @@ const handlePublic = (request, response, url) => { // PASS THE URL
         }
         
     )
-    console.log(url);
+    console.log(endpoint);
 
     
 }
+
+const handleData = (request, response, endpoint) => {
+let urlObject = url.parse(endpoint);
+let searchTerm = urlObject.query;
+let result = search(searchTerm);
+response.writeHead(200, { "Content-Type": "application/json" });
+response.end(JSON.stringify(result));
+}
+
 
 
 // Objects - put it only once as its called the same 
 module.exports = {
     handleHome,
-    handlePublic
+    handlePublic,
+    handleData
 }
