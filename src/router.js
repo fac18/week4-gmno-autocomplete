@@ -5,6 +5,10 @@ const router = (request, response) => {
         handlers.handleHome(request, response);
     } else if (url.indexOf('public')) {
         handlers.handlePublic(request, response, url); // PASS THE URL 
+    
+    } else if (url.includes("/search")) {
+        handlers.handleData(request, response, url);
+           
     } else {
         response.writeHead(404);
         response.end('404 not found');

@@ -50,15 +50,22 @@ const handlePublic = (request, response, url) => { // PASS THE URL
                 'Content-Type': 'text/html'
             });
             response.end("<h1>404 not found </h1>");
-        } else {
+
+        }  else {
             response.writeHead(200, {
                 'Content-Type': extensionType[extension]
             });
             response.end(file);
+        } 
         }
-    })
+        
+    )
     console.log(url);
+
+    
 }
+
+
 // Objects - put it only once as its called the same 
 module.exports = {
     handleHome,
