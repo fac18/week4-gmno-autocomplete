@@ -39,6 +39,7 @@ const populateDropDown = () => {
     liElement.appendChild(remainingText);
     dropDownInfo.appendChild(liElement);
     liElement.addEventListener("click", chooseOption);
+    // dropDownInfo.classList.add("border");
   })
 
   console.log('this is siteArray ', siteArray);

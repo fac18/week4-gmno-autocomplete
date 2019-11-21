@@ -8,6 +8,8 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    border: 0;
+    margin: 0;
 }
 
 .remaining-text {
@@ -24,23 +26,38 @@ ul{
     list-style-type: none;
     width: 15rem;
     padding-inline-start: 0;
-    margin-top: 5px;
-    cursor: pointer
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: -0.35em;
 }
+
+/* .border {
+    border: solid  2px #d3d3d3;
+} */
 
 li{
     background-color: white;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 li:hover{
-    background-color: #bad5ff;
+    background-color: #d3d3d3;
+    cursor: pointer;
 }
 
 .input-box {
     width: 15rem;
     font-family: sans-serif;
     padding: 0;
+    margin: 0;
     /* font-size: 0.9rem; */
+}
+
+form {
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 main {
@@ -49,6 +66,11 @@ main {
     justify-content: center;
     flex-direction: column;
     min-height: 100vh;
+}
+
+.dropdown-container {
+    position: relative;
+
 }
 
 .search-icon {
