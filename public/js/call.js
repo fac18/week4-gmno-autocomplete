@@ -11,15 +11,15 @@ const changeValue = () => {
   xhr.onreadystatechange = () => {
     if (xhr.readyState == 4 && xhr.status == 200) {
       //populate suggestionsArray with parsed JSON response
-      suggestionsArray = JSON.parse(xhr.responseText);
+      siteArray = JSON.parse(xhr.responseText);
       //fill DOM with li elements created from suggestionsArray
+      console.log(siteArray);
       populateDropDown();
     }
   };
 
   xhr.open("GET", searchUrl, true);
   xhr.send();
-
 
 }
 
@@ -28,19 +28,21 @@ const populateDropDown = () => {
   dropDownInfo.textContent = "";
   siteArray.forEach((site) => {
     let liElement = document.createElement("li");
-    // liElement.classList.add("site-item");
+    liElement.classList.add("site-item");
     let matchingText = document.createElement("span");
-    // matchingText.classList.add("matching-text");
-    matchingText.textContent = site.slice(0, searchBox.value.length);
-    // let remainingText = document.createElement("span");
-    // remainingText.classList.add("remaining-text");
-    // remainingText.textContent = site.slice(searchBox.value.length);
+    matchingText.classList.add("matching-text");
+    matchingText.textContent = site.slice(0, siteBox.value.length);
+    let remainingText = document.createElement("span");
+    remainingText.classList.add("remaining-text");
+    remainingText.textContent = site.slice(siteBox.value.length);
     liElement.appendChild(matchingText);
-    // liElement.appendChild(remainingText);
-    dropDownInfo.appendchild(liElement);
+    liElement.appendChild(remainingText);
+    dropDownInfo.appendChild(liElement);
 
-    console.log('this is siteArray ', siteArray);
+    
   })
+
+  console.log('this is siteArray ', siteArray);
 }
 
 

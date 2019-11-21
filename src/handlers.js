@@ -69,8 +69,10 @@ const handlePublic = (request, response, endpoint) => { // PASS THE URL
 
 const handleData = (request, response, endpoint) => {
 let urlObject = url.parse(endpoint);
-let searchTerm = urlObject.query;
+let searchTerm = urlObject.query.split("=")[1];
 let result = search(searchTerm);
+console.log({searchTerm});
+console.log({result});
 response.writeHead(200, { "Content-Type": "application/json" });
 response.end(JSON.stringify(result));
 }
