@@ -60,7 +60,9 @@ const handlePublic = (request, response, url) => { // PASS THE URL
     console.log(url);
 }
 // Objects - put it only once as its called the same 
+
 module.exports = {
     handleHome,
-    handlePublic
+    handlePublic, 
+    search
 }
