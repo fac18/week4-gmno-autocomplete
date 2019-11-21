@@ -1,10 +1,8 @@
 let siteArray = [];
-let siteBox = document.querySelector(".input-box");
 
-const changeValue = () =>
-{
-    let searchTerm=siteBox.value;
-    let xhr = new XMLHttpRequest();
+const changeValue = () => {
+  let searchTerm = siteBox.value;
+  let xhr = new XMLHttpRequest();
 
   //example search endpoint : /search?q=fluffyunicorn
 
@@ -22,28 +20,28 @@ const changeValue = () =>
   xhr.open("GET", searchUrl, true);
   xhr.send();
 
-  
+
 }
 
 const populateDropDown = () => {
-let dropDownInfo=document.querySelector(".dropdown-box")
-dropDownInfo.textContent="";
-siteArray.forEach((site, i) => {
+  let dropDownInfo = document.querySelector(".dropdown-box")
+  dropDownInfo.textContent = "";
+  siteArray.forEach((site) => {
     let liElement = document.createElement("li");
-    liElement.classList.add("site-item");
+    // liElement.classList.add("site-item");
     let matchingText = document.createElement("span");
-    matchingText.classList.add("matching-text");
+    // matchingText.classList.add("matching-text");
     matchingText.textContent = site.slice(0, searchBox.value.length);
-    let remainingText = document.createElement("span");
-    remainingText.classList.add("remaining-text");
-    remainingText.textContent = site.slice(searchBox.value.length);
+    // let remainingText = document.createElement("span");
+    // remainingText.classList.add("remaining-text");
+    // remainingText.textContent = site.slice(searchBox.value.length);
     liElement.appendChild(matchingText);
-    liElement.appendChild(remainingText);
+    // liElement.appendChild(remainingText);
     dropDownInfo.appendchild(liElement);
 
+    console.log('this is siteArray ', siteArray);
+  })
 }
-)
-}
+
 
 siteBox.addEventListener("input", changeValue);
-
