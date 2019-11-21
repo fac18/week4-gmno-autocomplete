@@ -42,7 +42,9 @@ const handlePublic = (request, response, endpoint) => { // PASS THE URL
         html: 'text/html',
         css: 'text/css',
         js: 'application/js',
-        ico: 'image/x-icon'
+        ico: 'image/x-icon',
+        svg: 'image/svg+xml',
+        jpeg: 'image/jpeg'
     };
     const filePath = path.join(__dirname, '..', endpoint);
     fs.readFile(filePath, (error, file) => {
