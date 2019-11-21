@@ -10,3 +10,8 @@ siteButton.addEventListener("click", () => {
                             .split(" ")
                             .join("_");
   });
+
+  chooseOption = event => {
+      let optionText = event.currentTarget.textContent;
+      siteBox.value = optionText;
+  }
