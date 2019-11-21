@@ -81,4 +81,5 @@ main {
     border: none;
     padding: 0.25em;
     border-style: solid;
+    cursor: pointer;
 }
