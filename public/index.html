@@ -1,29 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <title>World Heritage Sites in the U.K.</title>
-        <meta name="description" content="World Heritage Sites in the U.K. autocomplete"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="description" content="World Heritage Sites in the U.K.
+            autocomplete" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Calistoga&display=swap"
+            rel="stylesheet">
         <link rel="stylesheet" href="public/style.css" />
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+            integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+            crossorigin="anonymous">
     </head>
 
     <body>
-     <main>
-            <h1>Discover</h1>
-        <section class="container">
-        <form>
-            <input autocomplete="off" name="site-box" class="input-box" aria-label="Enter your heritage here" placeholder="Enter your wanted heritage site here..." type="text">
-            <button id="site-button" aria-label="Submit button" type="submit" class="fas fa-search-location search-icon"></button>
-        </form>
-        <div class="dropdown-container">
-        <ul class="dropdown-box"></ul>
-        </div>
-        </section>
-    </main>
-    <script src="public/js/script.js" ></script>
-    <script src="public/js/call.js"></script>
+        <main>
+            <div class="box-container">
+                <h1>Discover</h1>
+                <section class="container">
+                    <form>
+                        <input autocomplete="off" name="site-box"
+                            class="input-box" aria-label="Enter your heritage
+                            here" placeholder="Enter your wanted heritage site
+                            here..." type="text">
+                        <button id="site-button" aria-label="Submit button"
+                            type="submit" class="fas fa-search-location
+                            search-icon"></button>
+                    </form>
+                    <div class="dropdown-container">
+                        <ul class="dropdown-box"></ul>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <script src="public/js/script.js"></script>
+        <script src="public/js/call.js"></script>
     </body>
 </html>
