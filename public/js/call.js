@@ -38,8 +38,7 @@ const populateDropDown = () => {
     liElement.appendChild(matchingText);
     liElement.appendChild(remainingText);
     dropDownInfo.appendChild(liElement);
-
-    
+    liElement.addEventListener("click", chooseOption);
   })
 
   console.log('this is siteArray ', siteArray);
