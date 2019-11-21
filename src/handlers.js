@@ -78,8 +78,10 @@ response.end(JSON.stringify(result));
 
 
 // Objects - put it only once as its called the same 
+
 module.exports = {
     handleHome,
     handlePublic,
-    handleData
+    handleData,
+    search
 }
