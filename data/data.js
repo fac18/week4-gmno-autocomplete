@@ -2,8 +2,6 @@ const siteList = [
     "Blaenavon Industrial Landscape",
     "Blenheim Palace",
     "Canterbury Cathedral",
-    "St Augustine's Abbey",
-    "St Martin's Church",
     "Castles and Town Walls of King Edward in Gwynedd",
     "City of Bath",
     "Cornwall and West Devon Mining Landscape",
