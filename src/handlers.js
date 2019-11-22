@@ -10,8 +10,11 @@ const search = term => {
 
     return data.filter(site => {
         let siteLowerCase = site.toLowerCase();
-        let termLowerCase = term.toLowerCase();
-        return siteLowerCase.startsWith(termLowerCase);
+        let termLowerCase = decodeURI(term.toLowerCase());
+        return (
+        siteLowerCase.startsWith(termLowerCase) && 
+        siteLowerCase !== termLowerCase
+        );
     });
 }
 
