@@ -3,9 +3,6 @@ const fs = require('fs');
 const path = require('path');
 const url = require ('url');
 
-//handler takes care of serving the page 
-// handleHome (if statement) passed from router // its the home page 
-
 const search = term => {
     if (term === "") {
         return [];
@@ -35,7 +32,7 @@ const handleHome = (request, response) => {
         }
     });
 }
-// handlePublic (else if statements) passed from router 
+
 const handlePublic = (request, response, endpoint) => { // PASS THE URL
     const extension = endpoint.split('.')[1];
     const extensionType = {
@@ -62,26 +59,16 @@ const handlePublic = (request, response, endpoint) => { // PASS THE URL
             response.end(file);
         } 
         }
-        
-    )
-    console.log(endpoint);
-
-    
+    )    
 }
 
 const handleData = (request, response, endpoint) => {
 let urlObject = url.parse(endpoint);
 let searchTerm = urlObject.query.split("=")[1];
 let result = search(decodeURI(searchTerm));
-console.log({searchTerm});
-console.log({result});
 response.writeHead(200, { "Content-Type": "application/json" });
 response.end(JSON.stringify(result));
 }
-
-
-
-// Objects - put it only once as its called the same 
 
 module.exports = {
     handleHome,

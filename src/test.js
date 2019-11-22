@@ -33,7 +33,3 @@ test("none of the strings returned should be empty", function(t) {
     t.deepEquals(actual, expected, "should not return an empty str");
     t.end();
 })
-
-
-// returns an array of strings for c 
-
