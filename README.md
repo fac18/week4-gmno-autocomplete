@@ -2,7 +2,7 @@
 
 ## Project - Autocomplete Website
 
-## Installation 
+#### Installation 
 
 To install the project, follow these simple steps:
 
