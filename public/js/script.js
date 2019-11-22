@@ -6,14 +6,12 @@ const siteButton = document.querySelector("#site-button");
 
 siteButton.addEventListener("click", () => {
     event.preventDefault();
+    if (siteBox.value) {
     window.location.href = "https://en.wikipedia.org/wiki/" + siteBox.value
         .split(" ")
         .join("_");
+    }
 });
-
-if (siteBox.value === '') {
-    siteButton.disabled = true;
-}
 
 chooseOption = event => {
     let optionText = event.currentTarget.textContent;
