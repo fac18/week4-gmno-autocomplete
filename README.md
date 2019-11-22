@@ -183,6 +183,14 @@ After the Design Burst hosted by Bobby on wednesday afternoon we've decided to f
 
 6. We  started to write a function to capitalise the first letter of every word except 'and 'of' and 'to' before realising it was completely uneccessary - a lesson in not making uneccessary work for yourself
 
+#### Post Code Review
+
+* Added keyboard functionality
+* Disabled search going straight to wikipedia
+* Autocompleter sorted (Disappears when you click on another page/option)
+* Links to Wikipedia upon clicking a selection
+* Styled page appropriately and clarified placeholder
+
 #### Where Next
 
 * Making one for all sites internationally (The true dream)
