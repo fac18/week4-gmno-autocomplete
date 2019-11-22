@@ -6,9 +6,11 @@ const siteButton = document.querySelector("#site-button");
 
 siteButton.addEventListener("click", () => {
     event.preventDefault();
+    if (siteBox.value) {
     window.location.href = "https://en.wikipedia.org/wiki/" + siteBox.value
         .split(" ")
         .join("_");
+    }
 });
 
 chooseOption = event => {
