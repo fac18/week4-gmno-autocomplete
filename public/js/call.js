@@ -4,16 +4,12 @@ const changeValue = () => {
   let searchTerm = siteBox.value;
   let xhr = new XMLHttpRequest();
 
-  //example search endpoint : /search?q=fluffyunicorn
-
   let searchUrl = `/search?q=${searchTerm}`;
-  console.log(searchUrl);
   xhr.onreadystatechange = () => {
     if (xhr.readyState === 4 && xhr.status === 200) {
       //populate suggestionsArray with parsed JSON response
       siteArray = JSON.parse(xhr.responseText);
       //fill DOM with li elements created from suggestionsArray
-      console.log(siteArray);
       populateDropDown();
     }
   };
@@ -39,10 +35,7 @@ const populateDropDown = () => {
     liElement.appendChild(remainingText);
     dropDownInfo.appendChild(liElement);
     liElement.addEventListener("click", chooseOption);
-    // dropDownInfo.classList.add("border");
   })
-
-  console.log('this is siteArray ', siteArray);
 }
 
 
