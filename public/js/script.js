@@ -11,10 +11,6 @@ siteButton.addEventListener("click", () => {
         .join("_");
 });
 
-if (siteBox.value === '') {
-    siteButton.disabled = true;
-}
-
 chooseOption = event => {
     let optionText = event.currentTarget.textContent;
     siteBox.value = optionText;
