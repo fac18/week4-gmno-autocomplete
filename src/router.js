@@ -4,11 +4,11 @@ const router = (request, response) => {
     
     if (endpoint === '/') {
         handlers.handleHome(request, response);
+
     } else if (endpoint.includes('public')) {
         handlers.handlePublic(request, response, endpoint); // PASS THE URL 
     
     } else if (endpoint.includes("search")) {
-        console.log("this is router search");
         handlers.handleData(request, response, endpoint);
            
     } else {

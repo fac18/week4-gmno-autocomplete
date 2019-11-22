@@ -7,11 +7,11 @@ const siteButton = document.querySelector("#site-button");
 siteButton.addEventListener("click", () => {
     event.preventDefault();
     window.location.href = "https://en.wikipedia.org/wiki/" + siteBox.value
-                            .split(" ")
-                            .join("_");
-  });
+        .split(" ")
+        .join("_");
+});
 
-  chooseOption = event => {
-      let optionText = event.currentTarget.textContent;
-      siteBox.value = optionText;
-  }
+chooseOption = event => {
+    let optionText = event.currentTarget.textContent;
+    siteBox.value = optionText;
+}
