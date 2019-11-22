@@ -9,7 +9,7 @@ const changeValue = () => {
   let searchUrl = `/search?q=${searchTerm}`;
   console.log(searchUrl);
   xhr.onreadystatechange = () => {
-    if (xhr.readyState == 4 && xhr.status == 200) {
+    if (xhr.readyState === 4 && xhr.status === 200) {
       //populate suggestionsArray with parsed JSON response
       siteArray = JSON.parse(xhr.responseText);
       //fill DOM with li elements created from suggestionsArray
