@@ -2,6 +2,7 @@ let siteArray = [];
 
 const changeValue = () => {
   let searchTerm = siteBox.value;
+  console.log("this is searchterm", searchTerm);
   let xhr = new XMLHttpRequest();
 
   //example search endpoint : /search?q=fluffyunicorn

@@ -13,8 +13,13 @@ const search = term => {
 
     return data.filter(site => {
         let siteLowerCase = site.toLowerCase();
-        let termLowerCase = term.toLowerCase();
-        return siteLowerCase.startsWith(termLowerCase);
+        let termLowerCase = decodeURI(term.toLowerCase());
+        console.log("this is sitelowercase", siteLowerCase);
+        console.log("this is termlowercase", termLowerCase);
+        return (
+        siteLowerCase.startsWith(termLowerCase) && 
+        siteLowerCase !== termLowerCase
+        );
     });
 }
 
@@ -72,8 +77,8 @@ const handlePublic = (request, response, endpoint) => { // PASS THE URL
 const handleData = (request, response, endpoint) => {
 let urlObject = url.parse(endpoint);
 let searchTerm = urlObject.query.split("=")[1];
-let result = search(decodeURI(searchTerm));
-console.log({searchTerm});
+let result = search((searchTerm));
+console.log("this is searchterm", {searchTerm});
 console.log({result});
 response.writeHead(200, { "Content-Type": "application/json" });
 response.end(JSON.stringify(result));

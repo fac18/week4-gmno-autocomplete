@@ -14,4 +14,5 @@ siteButton.addEventListener("click", () => {
   chooseOption = event => {
       let optionText = event.currentTarget.textContent;
       siteBox.value = optionText;
+      changeValue();
   }
