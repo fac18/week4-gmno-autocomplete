@@ -58,6 +58,6 @@ siteBox.addEventListener ("keydown", function(e) {
     e.preventDefault();
     i--;
     siteBox.value = siteArray[i];
-}
+  }
+
 })
-  

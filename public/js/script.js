@@ -13,7 +13,17 @@ siteButton.addEventListener("click", () => {
     }
 });
 
+let optionRedirect = function () {
+    if (siteBox.value) {
+        window.location.href = "https://en.wikipedia.org/wiki/" + siteBox.value
+            .split(" ")
+            .join("_");
+        }
+}
+
+
 chooseOption = event => {
     let optionText = event.currentTarget.textContent;
     siteBox.value = optionText;
+    optionRedirect();
 }
