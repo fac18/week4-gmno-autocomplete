@@ -40,6 +40,7 @@ const populateDropDown = () => {
     liElement.appendChild(remainingText);
     dropDownInfo.appendChild(liElement);
     liElement.addEventListener("click", chooseOption);
+    console.log(liElement);
     // dropDownInfo.classList.add("border");
   })
 

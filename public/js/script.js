@@ -16,3 +16,21 @@ siteButton.addEventListener("click", () => {
       siteBox.value = optionText;
       changeValue();
   }
+
+  // List should close when someone clicks
+
+
+  function closeAllLists(elmnt) {
+    /*close all autocomplete lists in the document,
+    except the one passed as an argument:*/
+    var x = document.getElementsByClassName("site-item");
+    var ul = document.getElementsByClassName("dropdown-box")[0];
+    console.log("this is the list array", x);
+    while (ul.firstChild) {
+    ul.removeChild(ul.firstChild);
+    }    
+  }
+  /*execute a function when someone clicks in the document:*/
+  document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+  });
