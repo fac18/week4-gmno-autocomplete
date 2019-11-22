@@ -2,6 +2,15 @@
 
 ## Project - Autocomplete Website
 
+#### Installation 
+
+To install the project, follow these simple steps:
+
+1. Clone the project
+2. Run `npm install` to setup package dependencies
+3. Run `npm start` to access the local host
+4. Run `npm test` to access the tape tests
+
 #### Description
 
 - A website that enables users to quickly find and select words from a list of suggestions, as they type.

@@ -4,6 +4,7 @@ html {
 }
 
 body {
+    font-family: 'Quicksand', sans-serif;
     background-color: #b3e2ff;
     background-image: url("./img/stone.jpeg");
     background-position: center;
@@ -29,8 +30,6 @@ h1 {
     align-items: left;
 }
 
-
-
 ul {
     list-style-type: none;
     width: 15rem;
@@ -40,10 +39,6 @@ ul {
     position: absolute;
     top: 0;
 }
-
-/* .border {
-    border: solid  2px #d3d3d3;
-} */
 
 li {
     background-color: white;
@@ -55,7 +50,7 @@ li {
 }
 
 li:hover {
-    background-color: #d3d3d3;
+    background-color: #b3e2ff;
     cursor: pointer;
 }
 
@@ -67,7 +62,7 @@ li:hover {
     padding-left: 1em;
     margin: 0;
     background-color: #f6f9fc;
-    /* font-size: 0.9rem; */
+    font-family: 'Quicksand', sans-serif;
 }
 
 form {
@@ -85,11 +80,10 @@ main {
 
 .dropdown-container {
     position: relative;
-
 }
 
 .search-icon {
-    background-color: #0680CC;
+    background-color: #024b75;
     color: white;
     font-size: 1.5em;
     border-radius: 50%;
@@ -111,5 +105,4 @@ main {
         opacity: 1;
         box-shadow: 0px 3px 8px 3px #024b75;
     }
-
 }

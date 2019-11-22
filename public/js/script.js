@@ -6,16 +6,12 @@ const siteButton = document.querySelector("#site-button");
 
 siteButton.addEventListener("click", () => {
     event.preventDefault();
+    if (siteBox.value) {
     window.location.href = "https://en.wikipedia.org/wiki/" + siteBox.value
-                            .split(" ")
-                            .join("_");
-  });
-
-  chooseOption = event => {
-      let optionText = event.currentTarget.textContent;
-      siteBox.value = optionText;
-      changeValue();
-  }
+        .split(" ")
+        .join("_");
+    }
+});
 
   // List should close when someone clicks
 
@@ -34,3 +30,20 @@ siteButton.addEventListener("click", () => {
   document.addEventListener("click", function (e) {
       closeAllLists(e.target);
   });
+
+
+let optionRedirect = function () {
+    if (siteBox.value) {
+        window.location.href = "https://en.wikipedia.org/wiki/" + siteBox.value
+            .split(" ")
+            .join("_");
+        }
+}
+
+
+chooseOption = event => {
+    let optionText = event.currentTarget.textContent;
+    siteBox.value = optionText;
+    changeValue();
+    optionRedirect();
+}
