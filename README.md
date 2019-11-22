@@ -138,10 +138,7 @@ handlers.js(back-end) with call.js (front-end)
 
 ![](https://i.imgur.com/qXbpnlD.png)
 
-* search icon included
-* avoid scrollbars
-* highlight on hover 
-* mouse pointer
+
 
 ##### Step 10: Design Burst Stretch Goals
 
